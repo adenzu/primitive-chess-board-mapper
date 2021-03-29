@@ -60,7 +60,7 @@ def getPieceCoords(frame, colorLowerVal, colorUpperVal):
 
 		M = cv2.moments(c)
 
-		if cv2.contourArea(c) < 1000 : # 1000 is upper pixel are limit for contours
+		if cv2.contourArea(c) < 1000 : # 1000 is upper pixel area limit for contours
 			if M["m00"] != 0:
 				cX = int(M["m10"] / M["m00"]) 
 				cY = int(M["m01"] / M["m00"]) 
