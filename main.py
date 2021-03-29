@@ -60,7 +60,7 @@ def getPieceCoords(frame, colorLowerVal, colorUpperVal):
 
 		M = cv2.moments(c)
 
-		if cv2.contourArea(c) < 1000 : # 1000 is upper pixel limit are for contours
+		if cv2.contourArea(c) < 1000 : # 1000 is upper pixel are limit for contours
 			if M["m00"] != 0:
 				cX = int(M["m10"] / M["m00"]) 
 				cY = int(M["m01"] / M["m00"]) 
@@ -80,7 +80,7 @@ def getBoardArray(frame):
 	whitePieceCoords = getPieceCoords(frame, WHITE_LOWER_VAL, WHITE_UPPER_VAL)
 	blackPieceCoords = getPieceCoords(frame, BLACK_LOWER_VAL, BLACK_UPPER_VAL)
 
-        # arbitrary values, just to mark index, be sure that different than 0
+        # arbitrary values, just to mark index, be sure to set different than 0
 	WHITE_PIECE = 1
 	BLACK_PIECE = 2
 
