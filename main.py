@@ -67,7 +67,7 @@ def getPieceCoords(frame, colorLowerVal, colorUpperVal):
 
                                 # append coords of pieces to the list and mark the frame accordingly
 				coords.append( np.array([cX, cY]) - BOARD_RELATIVE_CORNER_COORDS )
-				cv2.circle(frame, (cX, cY), 5, (0, 0, 255), -1) #Kontür merkezine nokta çizme
+				cv2.circle(frame, (cX, cY), 5, (0, 0, 255), -1) # circle the center of the contour
 	
 	return coords
 
